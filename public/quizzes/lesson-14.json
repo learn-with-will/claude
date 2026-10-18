@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-14",
+  "lessonId": "lesson-14",
+  "title": "Cowork: Handing Claude Real Tasks",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is Cowork?",
+      "options": [
+        { "id": "a", "text": "Claude Code's agentic abilities applied to knowledge work: Claude plans and executes multi-step tasks for you" },
+        { "id": "b", "text": "A shared chat room for your coworkers" },
+        { "id": "c", "text": "A video-conferencing feature" },
+        { "id": "d", "text": "A free plan for teams" }
+      ],
+      "answer": "a",
+      "explanation": "Cowork brings Claude Code's agentic capabilities to knowledge work beyond coding, without needing a terminal. It's available on paid plans."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each Cowork permission mode to its behavior.",
+      "pairs": [
+        { "left": "Manual", "right": "Claude asks before actions; you allow or deny" },
+        { "left": "Auto", "right": "Claude reviews each action and blocks unsafe ones" },
+        { "left": "Skip", "right": "Nothing pauses or checks actions" }
+      ],
+      "explanation": "Manual gives full control, Auto adds safety checks (using more of your limit), and Skip removes checks, so use it only when you completely trust everything involved."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "You create a scheduled task in Cowork with the ____ command.",
+      "answer": ["/schedule", "schedule"],
+      "explanation": "Scheduled tasks run on demand or on a cadence, in the cloud with no device online; create one with /schedule."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which require the Claude desktop app to be open and connected? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Local file access" },
+        { "id": "b", "text": "Browser use" },
+        { "id": "c", "text": "Computer use" },
+        { "id": "d", "text": "A scheduled task that only searches the web and writes a doc in the cloud" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Tasks run in an isolated cloud environment, but local file access, browser use, and computer use need the desktop app running. Cloud-only scheduled tasks don't."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the parts of a good Cowork brief.",
+      "items": [
+        { "id": "checkpoints", "text": "Checkpoints (\"show me the plan first\")" },
+        { "id": "outcome", "text": "Outcome: what done looks like" },
+        { "id": "constraints", "text": "Constraints: format, limits, what not to touch" },
+        { "id": "inputs", "text": "Inputs: which files, folders, or connectors to use" }
+      ],
+      "answer": ["outcome", "inputs", "constraints", "checkpoints"],
+      "explanation": "Treat a task like a brief to a colleague: the outcome, the inputs, the constraints, and the checkpoints where Claude should pause."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Before permanently deleting any files, what does Claude require in Cowork?",
+      "options": [
+        { "id": "a", "text": "Your explicit permission" },
+        { "id": "b", "text": "Nothing; it deletes freely in every mode" },
+        { "id": "c", "text": "An admin's approval email" },
+        { "id": "d", "text": "A paid add-on" }
+      ],
+      "answer": "a",
+      "explanation": "The Help Center states that Claude requires your explicit permission before permanently deleting any files."
+    }
+  ]
+}

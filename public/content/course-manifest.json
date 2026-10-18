@@ -1,0 +1,410 @@
+[
+  {
+    "id": "lesson-01",
+    "slug": "what-is-claude",
+    "title": "What Is Claude?",
+    "level": "beginner",
+    "order": 1,
+    "duration": 18,
+    "file": "beginner/what-is-claude.md",
+    "summary": "What Claude actually is: a family of large language models made by Anthropic. Covers how a language model works in plain words (tokens, training, the context window, the knowledge cutoff), the Haiku, Sonnet, Opus, and Fable tiers, and every place you can use Claude.",
+    "tags": [
+      "claude",
+      "anthropic",
+      "large-language-models",
+      "model-family",
+      "knowledge-cutoff"
+    ]
+  },
+  {
+    "id": "lesson-02",
+    "slug": "getting-started-with-claude",
+    "title": "Getting Started: Apps, Plans, and Usage Limits",
+    "level": "beginner",
+    "order": 2,
+    "duration": 18,
+    "file": "beginner/getting-started-with-claude.md",
+    "summary": "How to start using Claude: signing up, the web, desktop, and mobile apps, a tour of the interface (the + menu, the model selector, effort and thinking), the plans from Free to Enterprise, and how five-hour and weekly usage limits work, with habits that make your usage last.",
+    "tags": [
+      "claude-apps",
+      "plans",
+      "usage-limits",
+      "interface",
+      "settings"
+    ]
+  },
+  {
+    "id": "lesson-03",
+    "slug": "talking-to-claude",
+    "title": "Talking to Claude: Conversations That Work",
+    "level": "beginner",
+    "order": 3,
+    "duration": 16,
+    "file": "beginner/talking-to-claude.md",
+    "summary": "How to hold a productive conversation with Claude: iterating instead of one-shotting, editing earlier messages to branch, asking Claude to interview you, getting honest critique instead of agreement, and knowing when to start a fresh chat.",
+    "tags": [
+      "conversation",
+      "iteration",
+      "feedback",
+      "context",
+      "honesty"
+    ]
+  },
+  {
+    "id": "lesson-04",
+    "slug": "prompting-fundamentals",
+    "title": "Prompting Fundamentals",
+    "level": "beginner",
+    "order": 4,
+    "duration": 22,
+    "file": "beginner/prompting-fundamentals.md",
+    "summary": "The core prompting techniques from Anthropic's own best-practices guide: being clear and direct, explaining why, showing examples, structuring with XML tags, giving Claude a role, and controlling the output format, plus a reusable prompt template.",
+    "tags": [
+      "prompt-engineering",
+      "clarity",
+      "examples",
+      "xml-tags",
+      "formatting"
+    ]
+  },
+  {
+    "id": "lesson-05",
+    "slug": "files-images-and-documents",
+    "title": "Working with Files, Images, and Documents",
+    "level": "beginner",
+    "order": 5,
+    "duration": 18,
+    "file": "beginner/files-images-and-documents.md",
+    "summary": "How to give Claude files and get files back: supported types and limits, how PDFs and images are read, getting grounded answers from long documents, and having Claude create real Excel, Word, PowerPoint, and PDF files by running code in a secure sandbox.",
+    "tags": [
+      "file-uploads",
+      "pdfs",
+      "vision",
+      "file-creation",
+      "code-execution"
+    ]
+  },
+  {
+    "id": "lesson-06",
+    "slug": "artifacts-docs-slides-and-designs",
+    "title": "Artifacts: Docs, Slides, Designs, and Interactive Apps",
+    "level": "beginner",
+    "order": 6,
+    "duration": 20,
+    "file": "beginner/artifacts-docs-slides-and-designs.md",
+    "summary": "Artifacts are the things Claude makes that you'd put in front of someone. This lesson covers the Docs, Slides, and Design templates, dashboards and interactive tools, editing in place, AI-powered artifacts, storage, and how to share and export your work.",
+    "tags": [
+      "artifacts",
+      "claude-docs",
+      "claude-slides",
+      "claude-design",
+      "sharing"
+    ]
+  },
+  {
+    "id": "lesson-07",
+    "slug": "projects-and-knowledge",
+    "title": "Projects: Workspaces with Knowledge, Instructions, and Memory",
+    "level": "beginner",
+    "order": 7,
+    "duration": 17,
+    "file": "beginner/projects-and-knowledge.md",
+    "summary": "Projects give Claude a dedicated workspace: a knowledge base of your files, standing instructions, and their own memory. This lesson covers how they work, how RAG lets them grow up to ten times larger, why they save usage, and how teams share them.",
+    "tags": [
+      "projects",
+      "knowledge-base",
+      "project-instructions",
+      "rag",
+      "collaboration"
+    ]
+  },
+  {
+    "id": "lesson-08",
+    "slug": "using-claude-responsibly",
+    "title": "Using Claude Responsibly: Limits, Privacy, and Values",
+    "level": "beginner",
+    "order": 8,
+    "duration": 20,
+    "file": "beginner/using-claude-responsibly.md",
+    "summary": "Claude's real limits and how to work with them safely: why models sometimes get facts wrong and how to catch it, what happens to your data and which privacy controls you have, how Claude's constitution shapes its behavior, and where human judgment must stay in charge.",
+    "tags": [
+      "hallucinations",
+      "verification",
+      "privacy",
+      "constitution",
+      "safety"
+    ]
+  },
+  {
+    "id": "lesson-09",
+    "slug": "models-effort-and-thinking",
+    "title": "Choosing Models, Effort, and Thinking",
+    "level": "intermediate",
+    "order": 9,
+    "duration": 17,
+    "file": "intermediate/models-effort-and-thinking.md",
+    "summary": "The three dials that control how Claude works on a task: which model, how much effort, and whether it thinks first. Covers what each level does, which combinations fit which jobs, and how to get top quality on hard problems without draining your usage on easy ones.",
+    "tags": [
+      "model-selection",
+      "effort",
+      "extended-thinking",
+      "usage",
+      "reasoning"
+    ]
+  },
+  {
+    "id": "lesson-10",
+    "slug": "web-search-and-research",
+    "title": "Web Search and Research",
+    "level": "intermediate",
+    "order": 10,
+    "duration": 18,
+    "file": "intermediate/web-search-and-research.md",
+    "summary": "How to get current, sourced information from Claude: turning on web search, reading and checking citations, fetching specific pages, and using Research for multi-source reports, plus when to use search versus thinking versus Research and how to judge what comes back.",
+    "tags": [
+      "web-search",
+      "research",
+      "citations",
+      "source-evaluation",
+      "connectors"
+    ]
+  },
+  {
+    "id": "lesson-11",
+    "slug": "memory-and-personalization",
+    "title": "Memory, Instructions, and Personalization",
+    "level": "intermediate",
+    "order": 11,
+    "duration": 18,
+    "file": "intermediate/memory-and-personalization.md",
+    "summary": "How to make Claude yours: account-wide instructions, memory saved as editable topics, searching past chats, project-separated memory, sensitive-topic and incognito controls, and why styles moved to skills, with a setup that stays helpful and private.",
+    "tags": [
+      "memory",
+      "personalization",
+      "instructions",
+      "chat-search",
+      "privacy-controls"
+    ]
+  },
+  {
+    "id": "lesson-12",
+    "slug": "connectors-and-mcp",
+    "title": "Connectors: Plugging Claude into Your Tools",
+    "level": "intermediate",
+    "order": 12,
+    "duration": 19,
+    "file": "intermediate/connectors-and-mcp.md",
+    "summary": "Connectors let Claude read from and act in your apps (email, calendars, docs, tickets, and more) through the open Model Context Protocol. This lesson covers the directory, remote connectors versus desktop extensions, custom connectors, tool permissions, and how to stay safe.",
+    "tags": [
+      "connectors",
+      "mcp",
+      "integrations",
+      "permissions",
+      "prompt-injection"
+    ]
+  },
+  {
+    "id": "lesson-13",
+    "slug": "skills-and-plugins",
+    "title": "Skills and Plugins",
+    "level": "intermediate",
+    "order": 13,
+    "duration": 21,
+    "file": "intermediate/skills-and-plugins.md",
+    "summary": "Skills teach Claude repeatable ways of doing specialized work, packaged as folders with a SKILL.md file that load only when relevant. This lesson covers Anthropic's built-in skills, writing and uploading your own, how they differ from projects and connectors, and how plugins bundle skills, connectors, and sub-agents.",
+    "tags": [
+      "skills",
+      "skill-md",
+      "progressive-disclosure",
+      "plugins",
+      "agent-skills"
+    ]
+  },
+  {
+    "id": "lesson-14",
+    "slug": "cowork-and-agentic-tasks",
+    "title": "Cowork: Handing Claude Real Tasks",
+    "level": "intermediate",
+    "order": 14,
+    "duration": 20,
+    "file": "intermediate/cowork-and-agentic-tasks.md",
+    "summary": "Cowork brings Claude Code's agentic abilities to everyday knowledge work: Claude plans and carries out multi-step tasks with your files, apps, and browser. This lesson covers how tasks run, permission modes, scheduled tasks, working from your phone, and how to delegate safely and well.",
+    "tags": [
+      "cowork",
+      "agentic-tasks",
+      "scheduled-tasks",
+      "permission-modes",
+      "delegation"
+    ]
+  },
+  {
+    "id": "lesson-15",
+    "slug": "claude-in-your-browser-and-apps",
+    "title": "Claude in Chrome and Your Other Apps",
+    "level": "intermediate",
+    "order": 15,
+    "duration": 19,
+    "file": "intermediate/claude-in-your-browser-and-apps.md",
+    "summary": "Claude doesn't only live at claude.ai. This lesson covers Claude in Chrome (a browser agent that reads, clicks, and fills forms), the Excel, PowerPoint, and Google Workspace sidebars, Claude in Slack, and mobile and voice, with the safety habits each one needs.",
+    "tags": [
+      "claude-in-chrome",
+      "browser-agent",
+      "microsoft-365",
+      "google-workspace",
+      "mobile"
+    ]
+  },
+  {
+    "id": "lesson-16",
+    "slug": "claude-code-essentials",
+    "title": "Claude Code Essentials",
+    "level": "intermediate",
+    "order": 16,
+    "duration": 22,
+    "file": "intermediate/claude-code-essentials.md",
+    "summary": "Claude Code is Anthropic's agentic coding tool: it reads your codebase, edits files, runs commands, and verifies its work. This lesson covers installing it, the agentic loop, permission modes, checkpoints, the essential commands, and the explore, plan, implement, commit workflow.",
+    "tags": [
+      "claude-code",
+      "agentic-coding",
+      "permission-modes",
+      "checkpoints",
+      "cli"
+    ]
+  },
+  {
+    "id": "lesson-17",
+    "slug": "customizing-claude-code",
+    "title": "Customizing Claude Code: CLAUDE.md, Skills, Styles, and Permissions",
+    "level": "advanced",
+    "order": 17,
+    "duration": 24,
+    "file": "advanced/customizing-claude-code.md",
+    "summary": "How to shape Claude Code to your project and your habits: writing a CLAUDE.md that actually gets followed, path-scoped rules and auto memory, project skills with arguments, output styles, and permission rules in settings files, plus when each one is the right tool.",
+    "tags": [
+      "claude-md",
+      "claude-code-skills",
+      "output-styles",
+      "permissions",
+      "settings"
+    ]
+  },
+  {
+    "id": "lesson-18",
+    "slug": "automating-claude-code",
+    "title": "Automating Claude Code: Hooks, Subagents, MCP, Plugins, and CI",
+    "level": "advanced",
+    "order": 18,
+    "duration": 25,
+    "file": "advanced/automating-claude-code.md",
+    "summary": "Turning Claude Code from an assistant into automation: deterministic hooks, subagents that keep your context clean, connecting tools over MCP, packaging setups as plugins, and running Claude non-interactively in scripts, GitHub Actions, and scheduled routines.",
+    "tags": [
+      "hooks",
+      "subagents",
+      "claude-code-mcp",
+      "headless",
+      "github-actions"
+    ]
+  },
+  {
+    "id": "lesson-19",
+    "slug": "claude-api-first-steps",
+    "title": "The Claude API: Your First Requests",
+    "level": "advanced",
+    "order": 19,
+    "duration": 24,
+    "file": "advanced/claude-api-first-steps.md",
+    "summary": "Building with Claude through the Claude Developer Platform: API keys and the Console, your first Messages API request in Python, TypeScript, and curl, reading content blocks, usage, and stop reasons, multi-turn conversations, streaming, error handling, refusals, and what a request costs.",
+    "tags": [
+      "claude-api",
+      "messages-api",
+      "sdk",
+      "streaming",
+      "stop-reasons"
+    ]
+  },
+  {
+    "id": "lesson-20",
+    "slug": "thinking-and-structured-outputs",
+    "title": "Thinking, Effort, Vision, and Structured Outputs",
+    "level": "advanced",
+    "order": 20,
+    "duration": 23,
+    "file": "advanced/thinking-and-structured-outputs.md",
+    "summary": "Controlling how hard Claude thinks and exactly what it returns: adaptive thinking and the effort parameter, reading thinking summaries, sending images and PDFs, and getting guaranteed, schema-valid JSON with structured outputs now that assistant prefill is gone.",
+    "tags": [
+      "adaptive-thinking",
+      "effort-parameter",
+      "structured-outputs",
+      "vision",
+      "pdf-support"
+    ]
+  },
+  {
+    "id": "lesson-21",
+    "slug": "tool-use-and-agents",
+    "title": "Tool Use and Agents on the API",
+    "level": "advanced",
+    "order": 21,
+    "duration": 26,
+    "file": "advanced/tool-use-and-agents.md",
+    "summary": "How Claude calls your functions and Anthropic's hosted tools: defining tools, the tool_use and tool_result loop, the SDK tool runner, server tools like web search and code execution, when an agent is worth it, and the four ways to build one, from a hand-written loop to the Agent SDK and Managed Agents.",
+    "tags": [
+      "tool-use",
+      "agent-loop",
+      "server-tools",
+      "agent-sdk",
+      "managed-agents"
+    ]
+  },
+  {
+    "id": "lesson-22",
+    "slug": "cost-speed-and-scale",
+    "title": "Cost, Speed, and Scale: Caching, Batches, and Limits",
+    "level": "advanced",
+    "order": 22,
+    "duration": 24,
+    "file": "advanced/cost-speed-and-scale.md",
+    "summary": "Running Claude economically and fast at scale: where token costs come from, prompt caching as a prefix match, the 50%-off Batch API, choosing model and effort per route, managing long contexts, fast mode, rate limits, and measuring cost per completed task.",
+    "tags": [
+      "prompt-caching",
+      "batch-api",
+      "cost-optimization",
+      "latency",
+      "rate-limits"
+    ]
+  },
+  {
+    "id": "lesson-23",
+    "slug": "building-mcp-servers",
+    "title": "Building Your Own MCP Server",
+    "level": "advanced",
+    "order": 23,
+    "duration": 24,
+    "file": "advanced/building-mcp-servers.md",
+    "summary": "How to give Claude access to your own data and tools with the Model Context Protocol: hosts, clients, and servers; tools, resources, and prompts; stdio versus Streamable HTTP; building a small server with the Python SDK; connecting it to Claude Desktop, Claude Code, and claude.ai; and designing and securing it well.",
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "python-sdk",
+      "claude-desktop",
+      "tool-design"
+    ]
+  },
+  {
+    "id": "lesson-24",
+    "slug": "capstone-your-claude-workflow",
+    "title": "Capstone: Designing Your Claude Workflow",
+    "level": "advanced",
+    "order": 24,
+    "duration": 28,
+    "file": "advanced/capstone-your-claude-workflow.md",
+    "summary": "Pulling the whole course together: mapping your work, choosing the right Claude surface for each task, capturing knowledge, procedures, and connections, adding guardrails, measuring quality with a small evaluation, and maintaining the system, through two complete worked builds.",
+    "tags": [
+      "capstone",
+      "workflow-design",
+      "evaluation",
+      "governance",
+      "automation"
+    ]
+  }
+]

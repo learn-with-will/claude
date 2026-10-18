@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-13",
+  "lessonId": "lesson-13",
+  "title": "Skills and Plugins",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Why can you install many skills without filling Claude's context window?",
+      "options": [
+        { "id": "a", "text": "Progressive disclosure: Claude sees only names and descriptions until a skill is relevant" },
+        { "id": "b", "text": "Skills are compressed into a single token" },
+        { "id": "c", "text": "Only one skill can ever be installed" },
+        { "id": "d", "text": "Skills run on a separate server and never use context" }
+      ],
+      "answer": "a",
+      "explanation": "Skills load in layers: front-matter first, the body when relevant, and extra files only when needed."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "A skill's main file, which holds its name, description, and instructions, is called ____.",
+      "answer": ["skill.md", "SKILL.md"],
+      "explanation": "Each skill is a folder with a SKILL.md file (the Help Center writes it in lowercase) that starts with YAML front-matter."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which belong in a good skill description? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "What the skill does" },
+        { "id": "b", "text": "When Claude should use it" },
+        { "id": "c", "text": "Specific trigger situations, like \"weekly update\" or \"status report\"" },
+        { "id": "d", "text": "\"Useful stuff for work\"" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Claude decides when to load a skill from its description, so state what it does and when to use it. Vague descriptions trigger rarely or randomly."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the steps to add a custom skill to Claude.",
+      "items": [
+        { "id": "test", "text": "Test prompts that should and shouldn't trigger it" },
+        { "id": "write", "text": "Write the SKILL.md in a folder named after the skill" },
+        { "id": "upload", "text": "Upload it in Customize > Skills and turn it on" },
+        { "id": "zip", "text": "ZIP the folder so it's at the ZIP's root" }
+      ],
+      "answer": ["write", "zip", "upload", "test"],
+      "explanation": "Write the skill, package the folder as the ZIP's root, upload and enable it, then test both triggering and non-triggering prompts."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each feature to what it holds.",
+      "pairs": [
+        { "left": "Project", "right": "Background knowledge for one area" },
+        { "left": "Skill", "right": "A procedure or format loaded when relevant" },
+        { "left": "Connector (MCP)", "right": "Access to an external service" },
+        { "left": "Plugin", "right": "A bundle of skills, connectors, and sub-agents" }
+      ],
+      "explanation": "MCP connects Claude to services, skills teach Claude how to do work, projects hold area knowledge, and plugins package them together."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why should you only install plugins from trusted sources?",
+      "options": [
+        { "id": "a", "text": "Plugins can include local MCP servers that run on your computer with your permissions" },
+        { "id": "b", "text": "Plugins delete your projects" },
+        { "id": "c", "text": "Plugins always cost extra money" },
+        { "id": "d", "text": "Plugins disable memory" }
+      ],
+      "answer": "a",
+      "explanation": "The Help Center warns that plugins may include local MCP servers that run on your computer with the same permissions as any other program you run."
+    }
+  ]
+}

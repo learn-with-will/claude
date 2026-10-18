@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-11",
+  "lessonId": "lesson-11",
+  "title": "Memory, Instructions, and Personalization",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Where can you view, edit, or delete what Claude remembers about you?",
+      "options": [
+        { "id": "a", "text": "Settings > Memory > Topics" },
+        { "id": "b", "text": "Only by emailing support" },
+        { "id": "c", "text": "In the Artifacts tab" },
+        { "id": "d", "text": "You can't; memory is hidden" }
+      ],
+      "answer": "a",
+      "explanation": "Memory is saved as individual topics you can read, edit (pencil icon), or delete in Settings > Memory. You can also ask Claude to remember or forget things."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which kinds of data does memory never save, even on request? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Government ID numbers" },
+        { "id": "b", "text": "Financial account numbers" },
+        { "id": "c", "text": "Immigration status" },
+        { "id": "d", "text": "Your preferred communication style" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Government ID numbers, criminal history, financial account numbers, and immigration status are never saved. Communication preferences are a normal memory category."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Custom styles were migrated into ____, which arrive disabled so you can turn on the ones you want.",
+      "answer": ["skills", "skill"],
+      "explanation": "Styles moved to skills: custom styles were migrated to disabled skills, most presets were retired, and Learning remains as a skill."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each personalization tool to where it applies.",
+      "pairs": [
+        { "left": "Instructions for Claude", "right": "Every conversation" },
+        { "left": "Project instructions", "right": "Chats in one project" },
+        { "left": "Skills", "right": "Loaded when relevant" },
+        { "left": "Memory", "right": "Facts Claude learns over time" }
+      ],
+      "explanation": "Account-wide instructions apply everywhere, project instructions within a project, skills load on demand, and memory accumulates over time."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "Is memory on by default for Team and Enterprise members?",
+      "options": [
+        { "id": "a", "text": "No. An owner must enable it, and each member opts in" },
+        { "id": "b", "text": "Yes, always" },
+        { "id": "c", "text": "Only for admins" },
+        { "id": "d", "text": "Memory doesn't exist on those plans" }
+      ],
+      "answer": "a",
+      "explanation": "Memory is on by default for Free, Pro, and Max. On Team and Enterprise, owners enable it for the organization and it's off for each member until they opt in."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the steps to keep one client's details out of every other chat.",
+      "items": [
+        { "id": "toggle", "text": "Turn off Use account memory on that project for full separation" },
+        { "id": "project", "text": "Create a dedicated project for the client" },
+        { "id": "review", "text": "Periodically review that project's memory and files" },
+        { "id": "files", "text": "Add the client's files and instructions to that project" }
+      ],
+      "answer": ["project", "files", "toggle", "review"],
+      "explanation": "Each project has its own memory; turning off account memory gives full separation, and periodic review keeps it clean."
+    }
+  ]
+}

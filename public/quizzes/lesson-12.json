@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-12",
+  "lessonId": "lesson-12",
+  "title": "Connectors: Plugging Claude into Your Tools",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What open standard are Claude's connectors built on?",
+      "options": [
+        { "id": "a", "text": "The Model Context Protocol (MCP)" },
+        { "id": "b", "text": "SMTP" },
+        { "id": "c", "text": "Bluetooth" },
+        { "id": "d", "text": "A private Anthropic-only format" }
+      ],
+      "answer": "a",
+      "explanation": "Connectors use MCP, an open-source standard for connecting AI applications to external systems, which its docs compare to USB-C."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each connector type to its characteristics.",
+      "pairs": [
+        { "left": "Remote (web) connector", "right": "Runs in the cloud and works on every surface" },
+        { "left": "Desktop extension", "right": "Runs locally in Claude Desktop and Claude Code" },
+        { "left": "Custom connector", "right": "A remote MCP server URL you add yourself" }
+      ],
+      "explanation": "Remote connectors are the default and work everywhere; desktop extensions run locally; custom connectors point at any remote MCP server."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Free users can add ____ custom connector.",
+      "answer": ["one", "1"],
+      "explanation": "Custom remote MCP connectors are available on every plan, but Free users are limited to one."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are good safety habits with connectors? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Only connect services you trust and need" },
+        { "id": "b", "text": "Review actions before Claude sends or changes anything" },
+        { "id": "c", "text": "Disconnect services you no longer use" },
+        { "id": "d", "text": "Enable every connector in every chat for convenience" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Connect only trusted, needed services, review write actions (prompt injection is possible), and disconnect unused ones. Enable connectors per chat as needed."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "Why can't a custom connector reach a server that only exists on your private home network?",
+      "options": [
+        { "id": "a", "text": "Claude connects from Anthropic's cloud, so the server must be reachable over the public internet" },
+        { "id": "b", "text": "Custom connectors only support Google services" },
+        { "id": "c", "text": "Private servers are only allowed on the Free plan" },
+        { "id": "d", "text": "Claude connects from your laptop's Wi-Fi card" }
+      ],
+      "answer": "a",
+      "explanation": "Claude connects to custom connectors from Anthropic's cloud infrastructure, not your machine. Private networks may need allowlisting; local tools can use desktop extensions."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the steps to use a connector in a conversation.",
+      "items": [
+        { "id": "toggle", "text": "In a chat, toggle it on from + > Connectors" },
+        { "id": "browse", "text": "Find the connector in the directory" },
+        { "id": "review", "text": "Review any proposed actions before they run" },
+        { "id": "connect", "text": "Click Connect and sign in to the service" }
+      ],
+      "answer": ["browse", "connect", "toggle", "review"],
+      "explanation": "Find it in the directory, connect and authenticate once, enable it per chat, and review actions as Claude works."
+    }
+  ]
+}

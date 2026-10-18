@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-08",
+  "lessonId": "lesson-08",
+  "title": "Using Claude Responsibly: Limits, Privacy, and Values",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is a hallucination?",
+      "options": [
+        { "id": "a", "text": "A fluent, confident statement that is false or unsupported" },
+        { "id": "b", "text": "Any answer longer than a paragraph" },
+        { "id": "c", "text": "A refusal to answer" },
+        { "id": "d", "text": "An image Claude generates" }
+      ],
+      "answer": "a",
+      "explanation": "Hallucinations are statements that are factually wrong or inconsistent with the provided material, often delivered confidently."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which techniques reduce hallucinations? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Allowing Claude to say \"I don't know\"" },
+        { "id": "b", "text": "Asking for quotes and citations" },
+        { "id": "c", "text": "Restricting answers to provided documents" },
+        { "id": "d", "text": "Telling Claude to sound more confident" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Permission to admit uncertainty, grounding in quotes and citations, and restricting to provided material all help. Confidence isn't accuracy."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "A chat that isn't saved to history, memory, or chat search is called an ____ chat.",
+      "answer": ["incognito"],
+      "explanation": "Incognito chats (the ghost icon) aren't saved to chat history, memory, or search."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the core values in Claude's constitution by priority.",
+      "items": [
+        { "id": "helpful", "text": "Genuinely helpful" },
+        { "id": "safe", "text": "Broadly safe" },
+        { "id": "guidelines", "text": "Compliant with Anthropic's guidelines" },
+        { "id": "ethical", "text": "Broadly ethical" }
+      ],
+      "answer": ["safe", "ethical", "guidelines", "helpful"],
+      "explanation": "The constitution orders the properties as broadly safe, broadly ethical, compliant with Anthropic's guidelines, and genuinely helpful, applied holistically."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each account type to its default data policy (as of writing).",
+      "pairs": [
+        { "left": "Consumer, training allowed", "right": "Data kept up to 5 years" },
+        { "left": "Consumer, training not allowed", "right": "Data kept 30 days" },
+        { "left": "Team, Enterprise, or API", "right": "Not used for training by default" }
+      ],
+      "explanation": "Consumer users choose whether their data trains models (5-year vs 30-day retention); commercial accounts aren't used for training by default."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "You delete a conversation. What happens to memory entries generated from it?",
+      "options": [
+        { "id": "a", "text": "They aren't automatically removed; delete them in Settings > Memory" },
+        { "id": "b", "text": "They're always deleted instantly" },
+        { "id": "c", "text": "They're shared with your contacts" },
+        { "id": "d", "text": "They're moved into a project" }
+      ],
+      "answer": "a",
+      "explanation": "The Help Center notes that when a conversation expires or is deleted, related memory entries generated from it won't be removed, so clean them up in Settings > Memory."
+    }
+  ]
+}

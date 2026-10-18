@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-04",
+  "lessonId": "lesson-04",
+  "title": "Prompting Fundamentals",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is Anthropic's \"golden rule\" of prompting?",
+      "options": [
+        { "id": "a", "text": "If a colleague with minimal context would be confused by your prompt, Claude will be too" },
+        { "id": "b", "text": "Always write prompts in all capital letters" },
+        { "id": "c", "text": "Shorter prompts are always better" },
+        { "id": "d", "text": "Never give Claude any examples" }
+      ],
+      "answer": "a",
+      "explanation": "The guide's golden rule: show your prompt to a colleague with minimal context and ask them to follow it. If they'd be confused, Claude will be too."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "What makes few-shot examples effective? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "They're relevant to your real use case" },
+        { "id": "b", "text": "They're diverse and cover edge cases" },
+        { "id": "c", "text": "They're wrapped in <example> tags" },
+        { "id": "d", "text": "They're all nearly identical" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Examples should be relevant, diverse, and structured in tags. Near-identical examples can make Claude copy accidental patterns."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Labels like <instructions> and <context> that separate the parts of a prompt are called ____ tags.",
+      "answer": ["xml"],
+      "explanation": "XML tags help Claude parse prompts that mix instructions, context, examples, and input."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "Which formatting instruction follows Anthropic's advice best?",
+      "options": [
+        { "id": "a", "text": "Write your answer as smoothly flowing prose paragraphs." },
+        { "id": "b", "text": "Don't use markdown." },
+        { "id": "c", "text": "No lists, no bold, no headings, no tables." },
+        { "id": "d", "text": "Format it however." }
+      ],
+      "answer": "a",
+      "explanation": "Tell Claude what to do instead of what not to do. Describing the desired output works better than a list of prohibitions."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "For a long-document task, order the parts of the prompt as Anthropic recommends.",
+      "items": [
+        { "id": "question", "text": "Your question or task" },
+        { "id": "docs", "text": "The long documents, wrapped in tags" },
+        { "id": "quotes", "text": "An instruction to quote relevant passages before answering" }
+      ],
+      "answer": ["docs", "quotes", "question"],
+      "explanation": "Put long documents at the top and your query at the end (Anthropic saw up to 30% better quality), and ask Claude to ground its answer in quotes first."
+    },
+    {
+      "id": "q6",
+      "type": "match-pair",
+      "prompt": "Match each technique to what it does.",
+      "pairs": [
+        { "left": "Explaining the why", "right": "Lets Claude generalize from your reason" },
+        { "left": "Role prompting", "right": "Focuses expertise and tone" },
+        { "left": "Few-shot examples", "right": "Locks in format and tone" },
+        { "left": "Numbered steps", "right": "Keeps order and completeness when they matter" }
+      ],
+      "explanation": "Each technique targets a different weakness: reasons help generalization, roles focus expertise, examples steer format, and numbered steps enforce order."
+    }
+  ]
+}

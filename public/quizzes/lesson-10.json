@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-10",
+  "lessonId": "lesson-10",
+  "title": "Web Search and Research",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What must be on before you can use Research?",
+      "options": [
+        { "id": "a", "text": "Web search" },
+        { "id": "b", "text": "Incognito mode" },
+        { "id": "c", "text": "Voice mode" },
+        { "id": "d", "text": "Extended context" }
+      ],
+      "answer": "a",
+      "explanation": "The Help Center says you must have web search turned on for Research to function. Research also requires a paid plan."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Research runs on Claude ____ 5.5, whatever model you selected for the chat.",
+      "answer": ["opus"],
+      "explanation": "Research runs on Claude Opus 5.5 and falls back to Claude Opus 4.8 when needed, regardless of your selected model."
+    },
+    {
+      "id": "q3",
+      "type": "match-pair",
+      "prompt": "Match each need to the right tool.",
+      "pairs": [
+        { "left": "A quick current fact", "right": "Web search" },
+        { "left": "Hard reasoning that needs no new information", "right": "Extended thinking / higher effort" },
+        { "left": "A multi-source cited report", "right": "Research" },
+        { "left": "Analysis of one specific page", "right": "Web fetch (paste the URL)" }
+      ],
+      "explanation": "Search handles quick facts, thinking handles reasoning, Research handles comprehensive gathering (5+ searches), and web fetch reads a specific URL."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which habits help you evaluate cited sources? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Open the source and confirm it says what Claude claims" },
+        { "id": "b", "text": "Prefer primary sources like official sites and original studies" },
+        { "id": "c", "text": "Check whether the date matters and is current" },
+        { "id": "d", "text": "Trust any claim that has a citation" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "A citation only proves some page said something. Open it, prefer primary sources, check dates, and look for independent agreement."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "During Research on web or desktop, how does Claude treat your enabled connectors?",
+      "options": [
+        { "id": "a", "text": "It can use their tools automatically without asking each time" },
+        { "id": "b", "text": "It never uses connectors" },
+        { "id": "c", "text": "It asks for approval before every single connector call" },
+        { "id": "d", "text": "It disconnects them during Research" }
+      ],
+      "answer": "a",
+      "explanation": "During Research, Claude can use connector tools automatically without approval each time, so review which connectors are enabled first. On mobile, Research only searches the web."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the steps for a trustworthy Research report.",
+      "items": [
+        { "id": "audit", "text": "Open key citations and re-check single-source claims" },
+        { "id": "connectors", "text": "Review which connectors are enabled" },
+        { "id": "prompt", "text": "Write a prompt with scope, criteria, and preferred sources" },
+        { "id": "run", "text": "Turn on web search and Research, then run it" }
+      ],
+      "answer": ["connectors", "prompt", "run", "audit"],
+      "explanation": "Check connectors (Research may use them automatically), write a scoped prompt, run it, then audit the citations."
+    }
+  ]
+}

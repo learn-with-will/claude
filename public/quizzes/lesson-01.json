@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-01",
+  "lessonId": "lesson-01",
+  "title": "What Is Claude?",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which statement best describes Claude?",
+      "options": [
+        { "id": "a", "text": "A family of large language models made by Anthropic, plus the assistant and products built on them" },
+        { "id": "b", "text": "A search engine that looks up every answer on the web" },
+        { "id": "c", "text": "An image-generation model for photographs" },
+        { "id": "d", "text": "A database that stores your past conversations" }
+      ],
+      "answer": "a",
+      "explanation": "Anthropic's docs describe Claude as a family of large language models developed by Anthropic. The name also covers the assistant and products like Claude Code built on those models."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Everything Claude can see at once in a conversation (messages, files, instructions) is called its context ____.",
+      "answer": ["window", "context window"],
+      "explanation": "The context window is Claude's working memory: 1 million tokens on current models."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which of these are good reasons to turn on web search? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "You're asking about events after the model's knowledge cutoff" },
+        { "id": "b", "text": "You need current prices or recent news" },
+        { "id": "c", "text": "You want Claude to rewrite a paragraph you pasted" },
+        { "id": "d", "text": "You want sources you can open and verify" }
+      ],
+      "answer": ["a", "b", "d"],
+      "explanation": "Current models have a June 2026 knowledge cutoff, so recent facts need web search, which also provides citations. Rewriting text you pasted doesn't need the web."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the widely available model tiers from fastest to most capable.",
+      "items": [
+        { "id": "opus", "text": "Opus" },
+        { "id": "haiku", "text": "Haiku" },
+        { "id": "fable", "text": "Fable" },
+        { "id": "sonnet", "text": "Sonnet" }
+      ],
+      "answer": ["haiku", "sonnet", "opus", "fable"],
+      "explanation": "Haiku is the fastest, Sonnet balances speed and intelligence, Opus handles deep long-running work, and Fable is the most capable widely released tier."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        { "left": "Token", "right": "A small chunk of text Claude reads and writes" },
+        { "left": "Knowledge cutoff", "right": "The date after which training data stops" },
+        { "left": "Anthropic", "right": "The company that builds Claude" },
+        { "left": "Context window", "right": "Everything Claude can see in a conversation at once" }
+      ],
+      "explanation": "Tokens are the unit of text and billing, the knowledge cutoff limits what the model knows, Anthropic trains Claude, and the context window is its working memory."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "You ask Claude to make a photorealistic picture of a beach. What should you expect?",
+      "options": [
+        { "id": "a", "text": "Claude doesn't generate photos like image models; it can build diagrams and visuals with code instead" },
+        { "id": "b", "text": "A photograph generated instantly" },
+        { "id": "c", "text": "An error that ends the conversation" },
+        { "id": "d", "text": "A random image downloaded from the web" }
+      ],
+      "answer": "a",
+      "explanation": "Per the Help Center, Claude doesn't generate photos or illustrations the way image-generation tools do. It creates diagrams, charts, and visuals with HTML and SVG, and it can analyze images you upload."
+    }
+  ]
+}

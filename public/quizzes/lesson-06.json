@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-06",
+  "lessonId": "lesson-06",
+  "title": "Artifacts: Docs, Slides, Designs, and Interactive Apps",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which setting must be on for artifacts to work?",
+      "options": [
+        { "id": "a", "text": "Code execution and file creation" },
+        { "id": "b", "text": "Incognito mode" },
+        { "id": "c", "text": "Web search" },
+        { "id": "d", "text": "Voice mode" }
+      ],
+      "answer": "a",
+      "explanation": "Artifacts require Code execution and file creation to be turned on in Settings > Capabilities (Organization settings on Team and Enterprise)."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each artifact template to what it makes.",
+      "pairs": [
+        { "left": "Claude Docs", "right": "Living documents you can co-edit" },
+        { "left": "Claude Slides", "right": "Presentations that export to PowerPoint or PDF" },
+        { "left": "Claude Design", "right": "Visuals and prototypes on a canvas" },
+        { "left": "Dashboards (beta)", "right": "Live charts from connected apps and data" }
+      ],
+      "explanation": "Docs, Slides, and Design are the three templates; Dashboards (beta, paid plans) build charts that show their query and last refresh time."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "When an AI-powered artifact calls Claude, the usage counts against each ____'s own plan limits.",
+      "answer": ["user", "viewer", "person"],
+      "explanation": "AI-powered artifacts cost the builder nothing; usage counts against each user's own plan limits."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are valid ways to edit an artifact? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Ask for changes in the chat" },
+        { "id": "b", "text": "Edit a doc, slide, or design directly" },
+        { "id": "c", "text": "Highlight a section and use Edit with Claude" },
+        { "id": "d", "text": "Email the artifact to Anthropic for changes" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "You can ask in chat, edit directly in templates, or highlight a section and describe the change with Edit with Claude."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "A team tool stores everyone's feedback in shared storage. What's the consequence?",
+      "options": [
+        { "id": "a", "text": "Everyone who uses the artifact can see all of the stored feedback" },
+        { "id": "b", "text": "Only the builder can see it" },
+        { "id": "c", "text": "The data is deleted after each session" },
+        { "id": "d", "text": "Anthropic reviews it before others see it" }
+      ],
+      "answer": "a",
+      "explanation": "Shared storage is visible to everyone using the artifact; personal storage keeps each user's data private. The builder chooses which to use."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the steps for building and sharing an interactive artifact safely.",
+      "items": [
+        { "id": "share", "text": "Share it deliberately with the people who need it" },
+        { "id": "ask", "text": "Describe the tool you want Claude to build" },
+        { "id": "storage", "text": "Decide what goes in personal versus shared storage" },
+        { "id": "iterate", "text": "Iterate on features and fix issues" }
+      ],
+      "answer": ["ask", "iterate", "storage", "share"],
+      "explanation": "Build it, refine it, settle the storage scope (since shared storage is visible to all users), and only then share it. Artifacts start private."
+    }
+  ]
+}

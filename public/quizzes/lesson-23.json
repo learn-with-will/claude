@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-23",
+  "lessonId": "lesson-23",
+  "title": "Building Your Own MCP Server",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "match-pair",
+      "prompt": "Match each MCP participant to its role.",
+      "pairs": [
+        { "left": "Host", "right": "The AI application, like Claude Desktop or Claude Code" },
+        { "left": "Client", "right": "The connection the host keeps for each server" },
+        { "left": "Server", "right": "The program that provides tools, resources, and prompts" }
+      ],
+      "explanation": "A host creates one client per server; each server exposes context and capabilities."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Why must a stdio MCP server never print to stdout?",
+      "options": [
+        { "id": "a", "text": "stdout carries the JSON-RPC protocol messages, so extra output corrupts them" },
+        { "id": "b", "text": "Printing costs extra tokens" },
+        { "id": "c", "text": "stdout is disabled on Windows" },
+        { "id": "d", "text": "Claude reads stdout as user instructions" }
+      ],
+      "answer": "a",
+      "explanation": "In stdio servers, stdout is the protocol channel. Log with the logging module, which writes to stderr."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "MCP's transport for remote servers that serve many clients is called Streamable ____.",
+      "answer": ["http"],
+      "explanation": "Streamable HTTP uses HTTP POST with optional Server-Sent Events; stdio is the local transport."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are primitives an MCP server can expose? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Tools" },
+        { "id": "b", "text": "Resources" },
+        { "id": "c", "text": "Prompts" },
+        { "id": "d", "text": "Sampling (deprecated client primitive as of 2026-07-28)" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Servers expose tools, resources, and prompts. Sampling was a client primitive, and it's deprecated as of protocol version 2026-07-28."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps to build and use a local MCP server with Claude Desktop.",
+      "items": [
+        { "id": "config", "text": "Add it under mcpServers in claude_desktop_config.json with absolute paths" },
+        { "id": "write", "text": "Write tools as typed, documented functions with @mcp.tool()" },
+        { "id": "restart", "text": "Restart Claude Desktop and ask Claude to use the tool" },
+        { "id": "setup", "text": "Create the project and install the MCP SDK (uv add \"mcp[cli]\")" }
+      ],
+      "answer": ["setup", "write", "config", "restart"],
+      "explanation": "Set up the project, write the tools, register the server in the Desktop config with absolute paths, then restart and test."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What does a remote server need before you add it as a claude.ai custom connector?",
+      "options": [
+        { "id": "a", "text": "A publicly reachable URL and appropriate authentication, ideally OAuth" },
+        { "id": "b", "text": "Only a localhost address" },
+        { "id": "c", "text": "A Claude Desktop extension file" },
+        { "id": "d", "text": "Nothing; claude.ai can't use remote servers" }
+      ],
+      "answer": "a",
+      "explanation": "Claude connects from Anthropic's cloud, so the server must be internet-reachable, and MCP recommends OAuth for authentication."
+    }
+  ]
+}

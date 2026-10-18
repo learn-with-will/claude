@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-18",
+  "lessonId": "lesson-18",
+  "title": "Automating Claude Code: Hooks, Subagents, MCP, Plugins, and CI",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which exit code does a hook use to block an action?",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "0" },
+        { "id": "c", "text": "1" },
+        { "id": "d", "text": "127" }
+      ],
+      "answer": "a",
+      "explanation": "Exit 0 means no objection; exit 2 blocks the action, and what the hook writes to stderr becomes the reason."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each hook event to when it fires.",
+      "pairs": [
+        { "left": "PreToolUse", "right": "Before a tool runs (can block it)" },
+        { "left": "PostToolUse", "right": "After a tool runs (for example, to format a file)" },
+        { "left": "Notification", "right": "When Claude is waiting for your input or permission" },
+        { "left": "Stop", "right": "When Claude finishes a turn" }
+      ],
+      "explanation": "These lifecycle events let hooks block risky actions, post-process edits, alert you, or check work at the end of a turn."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "To share an MCP server with your whole team, add it with --scope project, which stores it in a committed ____ file.",
+      "answer": [".mcp.json", "mcp.json"],
+      "explanation": "Project-scoped MCP servers live in .mcp.json at the project root, which you commit so teammates get the same tools."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which make an unattended claude -p run safer? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "An explicit --allowedTools list" },
+        { "id": "b", "text": "--permission-mode dontAsk, which denies anything not pre-approved" },
+        { "id": "c", "text": "Capping turns and setting timeouts" },
+        { "id": "d", "text": "Granting every tool so it never gets stuck" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Minimal allowlists, dontAsk mode, and caps keep unattended runs contained. Granting every tool removes the protection."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "A team writes \"NEVER edit .env\" in CLAUDE.md, but Claude edits .env.local anyway. What's the robust fix?",
+      "options": [
+        { "id": "a", "text": "Add deny rules and a PreToolUse hook that exits 2 for those paths" },
+        { "id": "b", "text": "Write the rule in capital letters three more times" },
+        { "id": "c", "text": "Switch to a bigger model" },
+        { "id": "d", "text": "Delete the CLAUDE.md file" }
+      ],
+      "answer": "a",
+      "explanation": "CLAUDE.md is advisory. Deny rules and PreToolUse hooks are enforced by Claude Code itself, so the action is blocked, not just discouraged."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the quick setup of Claude in GitHub Actions.",
+      "items": [
+        { "id": "mention", "text": "Mention @claude in an issue or pull request" },
+        { "id": "run", "text": "Run /install-github-app inside Claude Code" },
+        { "id": "merge", "text": "Merge the workflow pull request it prepares" },
+        { "id": "secret", "text": "Let it install the GitHub App and save the authentication secret" }
+      ],
+      "answer": ["run", "secret", "merge", "mention"],
+      "explanation": "/install-github-app installs the app, saves the secret, and opens a workflow PR. Once that PR is merged, @claude works in the repository."
+    }
+  ]
+}

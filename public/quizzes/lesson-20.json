@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-20",
+  "lessonId": "lesson-20",
+  "title": "Thinking, Effort, Vision, and Structured Outputs",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "How do you configure thinking on current Claude models?",
+      "options": [
+        { "id": "a", "text": "thinking={\"type\": \"adaptive\"}, with effort controlling depth" },
+        { "id": "b", "text": "thinking={\"type\": \"enabled\", \"budget_tokens\": 4000}" },
+        { "id": "c", "text": "Prefill the reply with \"Let me think\"" },
+        { "id": "d", "text": "Thinking can't be used through the API" }
+      ],
+      "answer": "a",
+      "explanation": "Current models use adaptive thinking; the manual budget_tokens mode is rejected, and prefill returns a 400."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each API setting to what it does.",
+      "pairs": [
+        { "left": "output_config.effort", "right": "Trades thoroughness against tokens and latency" },
+        { "left": "thinking display: summarized", "right": "Returns a readable summary of Claude's reasoning" },
+        { "left": "output_config.format", "right": "Constrains the reply to a JSON schema" },
+        { "left": "citations on a document block", "right": "Links answer text back to source passages" }
+      ],
+      "explanation": "Effort sets how much work Claude does, display controls thinking visibility, format enforces a schema, and citations make document answers verifiable."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Thinking blocks come back with empty text by default; set display to \"____\" to receive a readable summary.",
+      "answer": ["summarized"],
+      "explanation": "display defaults to omitted. Thinking still happens and is billed; summarized returns a readable summary."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which replace the old prefill tricks on current models? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Structured outputs for JSON" },
+        { "id": "b", "text": "A system-prompt instruction to skip preambles" },
+        { "id": "c", "text": "A tool with an enum field for classification labels" },
+        { "id": "d", "text": "Prefilling the assistant turn with an opening brace" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Prefilling the final assistant turn returns a 400 on current models; use structured outputs, instructions, or enum tools instead."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps to get validated, typed output in Python.",
+      "items": [
+        { "id": "use", "text": "Use response.parsed_output as a validated object" },
+        { "id": "model", "text": "Define a Pydantic model for the fields you need" },
+        { "id": "parse", "text": "Call client.messages.parse(..., output_format=YourModel)" }
+      ],
+      "answer": ["model", "parse", "use"],
+      "explanation": "Define the schema as a Pydantic model, pass it to messages.parse, and read the validated parsed_output."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Which combination returns an error when used in the same request?",
+      "options": [
+        { "id": "a", "text": "Document citations together with structured outputs" },
+        { "id": "b", "text": "An image block together with a text block" },
+        { "id": "c", "text": "Adaptive thinking together with an effort setting" },
+        { "id": "d", "text": "A system prompt together with messages" }
+      ],
+      "answer": "a",
+      "explanation": "Citations are incompatible with output_config.format; use a two-step pipeline if you need both."
+    }
+  ]
+}

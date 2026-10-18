@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-03",
+  "lessonId": "lesson-03",
+  "title": "Talking to Claude: Conversations That Work",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "A chat went wrong three messages ago. What's usually the best move?",
+      "options": [
+        { "id": "a", "text": "Edit the message where it went off course, which creates a separate branch" },
+        { "id": "b", "text": "Keep adding corrections on top of the bad turns" },
+        { "id": "c", "text": "Delete your account and start over" },
+        { "id": "d", "text": "Switch to the most powerful model and repeat the same message" }
+      ],
+      "answer": "a",
+      "explanation": "Editing an earlier message creates a separate branch of the chat, removing the bad turns instead of stacking fixes on them."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Anthropic recommends explicitly giving Claude permission to say \"I don't ____\" to reduce made-up answers.",
+      "answer": ["know"],
+      "explanation": "Allowing Claude to admit uncertainty is one of the simplest ways to reduce hallucinations."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which prompts ask for honest critique rather than agreement? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "List the three weakest points in this plan." },
+        { "id": "b", "text": "This plan is great, right?" },
+        { "id": "c", "text": "Give me the strongest argument against my position." },
+        { "id": "d", "text": "Mark anything you're guessing about." }
+      ],
+      "answer": ["a", "c", "d"],
+      "explanation": "Asking for weaknesses, counterarguments, and marked guesses invites honest analysis. A leading question signals the answer you want."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the iterative conversation loop.",
+      "items": [
+        { "id": "refine", "text": "Refine until it's right, then ask for the final format" },
+        { "id": "ask", "text": "Ask for a first version with the key context" },
+        { "id": "react", "text": "React with specific feedback" }
+      ],
+      "answer": ["ask", "react", "refine"],
+      "explanation": "Good conversations ask with context, react specifically, and refine until the result is right."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each situation to the best move.",
+      "pairs": [
+        { "left": "Answer is close but needs tweaks", "right": "Send a specific follow-up" },
+        { "left": "One section of a long draft is off", "right": "Highlight it and use Edit with Claude" },
+        { "left": "Switching to an unrelated topic", "right": "Start a new chat" },
+        { "left": "Material you reuse in many chats", "right": "Put it in a Project" }
+      ],
+      "explanation": "Follow-ups suit small tweaks, Edit with Claude targets sections, new chats keep context focused, and Projects hold reusable material."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What is the \"interview me first\" pattern?",
+      "options": [
+        { "id": "a", "text": "Asking Claude to ask you clarifying questions before it drafts" },
+        { "id": "b", "text": "Asking Claude to pretend to be a job interviewer" },
+        { "id": "c", "text": "Having a colleague interview Claude" },
+        { "id": "d", "text": "Uploading your résumé before every chat" }
+      ],
+      "answer": "a",
+      "explanation": "For bigger tasks, asking Claude to interview you first collects context you might forget, so the result fits your real situation."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-19",
+  "lessonId": "lesson-19",
+  "title": "The Claude API: Your First Requests",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which endpoint do all Claude API requests go through?",
+      "options": [
+        { "id": "a", "text": "POST /v1/messages" },
+        { "id": "b", "text": "GET /v1/chat" },
+        { "id": "c", "text": "POST /v1/completions" },
+        { "id": "d", "text": "A different endpoint for every feature" }
+      ],
+      "answer": "a",
+      "explanation": "Everything goes through the Messages API. Tools, structured output, and thinking are features of that one request."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each stop_reason to its meaning.",
+      "pairs": [
+        { "left": "end_turn", "right": "Finished naturally" },
+        { "left": "max_tokens", "right": "Hit the output cap; the reply is cut off" },
+        { "left": "tool_use", "right": "Wants to call a tool" },
+        { "left": "refusal", "right": "Declined for safety reasons" }
+      ],
+      "explanation": "Always check stop_reason before trusting content: truncation, tool calls, and refusals each need different handling."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Because the Messages API is ____, you must resend the whole conversation to continue it.",
+      "answer": ["stateless", "state-less"],
+      "explanation": "The server remembers nothing between requests; continuity comes from the messages list you send."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are good practices for your first integration? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Keep the API key in an environment variable" },
+        { "id": "b", "text": "Loop over content blocks and check each block's type" },
+        { "id": "c", "text": "Stream long responses" },
+        { "id": "d", "text": "Hard-code the key so teammates can run the script" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Keys belong in the environment, content is a list of typed blocks (a thinking block may come first), and streaming avoids timeouts on long outputs."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps to make your first API call.",
+      "items": [
+        { "id": "call", "text": "Call messages.create with a model, max_tokens, and messages" },
+        { "id": "key", "text": "Create an API key in the Claude Console" },
+        { "id": "read", "text": "Read the content blocks, stop_reason, and usage" },
+        { "id": "env", "text": "Store the key in ANTHROPIC_API_KEY and install the SDK" }
+      ],
+      "answer": ["key", "env", "call", "read"],
+      "explanation": "Get a key, store it in the environment and install the SDK, send the request, then read the structured response."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "A request to Opus 5.5 uses 2,000 input and 500 output tokens. At $4/$20 per million tokens, what does it cost?",
+      "options": [
+        { "id": "a", "text": "$0.018" },
+        { "id": "b", "text": "$0.18" },
+        { "id": "c", "text": "$1.80" },
+        { "id": "d", "text": "$0.0018" }
+      ],
+      "answer": "a",
+      "explanation": "Input: 2,000 × $4 / 1,000,000 = $0.008. Output: 500 × $20 / 1,000,000 = $0.010. Total: $0.018."
+    }
+  ]
+}

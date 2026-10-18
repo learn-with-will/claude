@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-07",
+  "lessonId": "lesson-07",
+  "title": "Projects: Workspaces with Knowledge, Instructions, and Memory",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "How many projects can a Free user create?",
+      "options": [
+        { "id": "a", "text": "Up to five" },
+        { "id": "b", "text": "None" },
+        { "id": "c", "text": "Exactly one" },
+        { "id": "d", "text": "Unlimited" }
+      ],
+      "answer": "a",
+      "explanation": "Projects are available to everyone, and the Help Center says free users can create a maximum of five."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "What does a project give Claude? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "A knowledge base of your files" },
+        { "id": "b", "text": "Project instructions" },
+        { "id": "c", "text": "Its own memory" },
+        { "id": "d", "text": "Access to every other project's memory" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "A project bundles knowledge, instructions, and its own memory. It never uses other projects' memories."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "On paid plans, when a project's knowledge nears the context limit, Claude switches to ____ mode, expanding capacity up to 10x.",
+      "answer": ["rag", "retrieval-augmented generation", "retrieval augmented generation"],
+      "explanation": "RAG uses a project knowledge search tool to retrieve relevant passages instead of loading everything at once."
+    },
+    {
+      "id": "q4",
+      "type": "single-choice",
+      "prompt": "Why do projects help with usage limits?",
+      "options": [
+        { "id": "a", "text": "Project content is cached and counts less against your limits when reused" },
+        { "id": "b", "text": "Projects don't count toward usage at all" },
+        { "id": "c", "text": "Projects always use the smallest model" },
+        { "id": "d", "text": "Projects compress your files to save tokens" }
+      ],
+      "answer": "a",
+      "explanation": "Per the Help Center, content in projects is cached and counts less against your limits when reused (caches expire after inactivity)."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps for setting up a useful project.",
+      "items": [
+        { "id": "instructions", "text": "Write short, durable project instructions" },
+        { "id": "create", "text": "Create the project for one focused area of work" },
+        { "id": "upload", "text": "Upload current, descriptively named files" },
+        { "id": "ask", "text": "Ask questions that name the source document" }
+      ],
+      "answer": ["create", "upload", "instructions", "ask"],
+      "explanation": "Create a focused project, add current well-named files up front, write durable instructions, then ask questions that name specific documents."
+    },
+    {
+      "id": "q6",
+      "type": "match-pair",
+      "prompt": "Match each project sharing permission (Team/Enterprise) to what it allows.",
+      "pairs": [
+        { "left": "Can view", "right": "See contents and chat in the project" },
+        { "left": "Can edit", "right": "Change instructions and knowledge, manage members" },
+        { "left": "Owner setting", "right": "Turn project sharing off for the organization" }
+      ],
+      "explanation": "Can view lets members use the project; Can edit lets them change it and manage members; owners can disable sharing."
+    }
+  ]
+}

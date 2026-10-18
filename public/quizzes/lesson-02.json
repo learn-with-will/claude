@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-02",
+  "lessonId": "lesson-02",
+  "title": "Getting Started: Apps, Plans, and Usage Limits",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Where do you find tools like web search, connectors, and Research in the message box?",
+      "options": [
+        { "id": "a", "text": "In the + menu in the lower left (or by typing /)" },
+        { "id": "b", "text": "Only in Settings > Capabilities" },
+        { "id": "c", "text": "They're only available through the API" },
+        { "id": "d", "text": "In the browser's address bar" }
+      ],
+      "answer": "a",
+      "explanation": "The + button in the lower left of the message box, or typing /, opens additional options and commands, including tools and connectors."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which of these use more of your usage limit? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Very long conversations" },
+        { "id": "b", "text": "Large file attachments" },
+        { "id": "c", "text": "Research and web search" },
+        { "id": "d", "text": "Higher effort levels" }
+      ],
+      "answer": ["a", "b", "c", "d"],
+      "explanation": "The Help Center lists message length, attachment size, conversation length, tool use such as Research and web search, model choice, effort level, Artifacts, and multi-step tasks as factors that consume more usage."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Paid plans have a session limit that resets every ____ hours, plus weekly limits.",
+      "answer": ["5", "five"],
+      "explanation": "Paid plans have a five-hour session limit and weekly limits; Free also has a session limit that resets every five hours."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each plan to who it fits best.",
+      "pairs": [
+        { "left": "Free", "right": "Trying Claude at no cost" },
+        { "left": "Pro", "right": "Regular individual use" },
+        { "left": "Max", "right": "Heavy individual use with 5x or 20x Pro's usage" },
+        { "left": "Team", "right": "Small and mid-size teams with shared projects and admin controls" }
+      ],
+      "explanation": "Free is for trying Claude, Pro for regular individuals, Max for heavy users (5x or 20x Pro's usage), and Team for organizations that need collaboration and admin controls."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order these steps for deciding whether to upgrade your plan.",
+      "items": [
+        { "id": "upgrade", "text": "Upgrade only if you do" },
+        { "id": "use", "text": "Use your current plan for a couple of weeks" },
+        { "id": "check", "text": "Check Settings > Usage to see how much you actually use" },
+        { "id": "note", "text": "Note whether you regularly run out before the limits reset" }
+      ],
+      "answer": ["use", "check", "note", "upgrade"],
+      "explanation": "The lesson's advice is to check real usage in Settings > Usage over a couple of weeks before upgrading, and to upgrade only if you consistently run out."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "On a Pro or Max plan, how is Claude Code usage counted?",
+      "options": [
+        { "id": "a", "text": "It shares the same usage limits as your Claude chats" },
+        { "id": "b", "text": "It has a completely separate, unlimited allowance" },
+        { "id": "c", "text": "It's always billed at API rates" },
+        { "id": "d", "text": "It doesn't count toward anything" }
+      ],
+      "answer": "a",
+      "explanation": "The Help Center says these limits are shared across Claude and Claude Code, so all activity in both counts against the same limits."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-21",
+  "lessonId": "lesson-21",
+  "title": "Tool Use and Agents on the API",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "ordering",
+      "prompt": "Order one round of the tool-use loop.",
+      "items": [
+        { "id": "result", "text": "Your code sends back a tool_result matched by tool_use_id" },
+        { "id": "define", "text": "You send a request with tool definitions" },
+        { "id": "continue", "text": "Claude continues: more tool calls or a final answer" },
+        { "id": "use", "text": "Claude responds with stop_reason tool_use and tool_use blocks" },
+        { "id": "run", "text": "Your code runs the requested tool" }
+      ],
+      "answer": ["define", "use", "run", "result", "continue"],
+      "explanation": "Define tools, Claude requests a call, you execute it, return the result, and Claude continues until it finishes."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Claude makes three tool calls in one response. How should you return the results?",
+      "options": [
+        { "id": "a", "text": "All three tool_result blocks together in a single user message" },
+        { "id": "b", "text": "One user message per result" },
+        { "id": "c", "text": "Only the first result" },
+        { "id": "d", "text": "As plain text in the system prompt" }
+      ],
+      "answer": "a",
+      "explanation": "Return all parallel results in one user message. Splitting them across messages discourages Claude from making parallel calls."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "When a tool fails, return a tool_result with \"____\": true and a helpful message instead of dropping it.",
+      "answer": ["is_error"],
+      "explanation": "Reporting errors as is_error results lets Claude recover, for example by fixing the input or explaining the problem."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each approach to who runs the loop and the infrastructure.",
+      "pairs": [
+        { "left": "Manual loop", "right": "You build and host everything" },
+        { "left": "Tool runner", "right": "The SDK runs the loop; you host" },
+        { "left": "Claude Agent SDK", "right": "Claude Code's harness and built-in tools as a library; you host" },
+        { "left": "Managed Agents", "right": "Anthropic runs the loop and hosts a sandbox per session" }
+      ],
+      "explanation": "Only Managed Agents supplies both the harness and the hosted deployment; the others leave hosting to you."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which criteria should all hold before you build an agent? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "The task is multi-step and hard to specify in advance" },
+        { "id": "b", "text": "The outcome justifies higher cost and latency" },
+        { "id": "c", "text": "Errors can be caught and recovered from" },
+        { "id": "d", "text": "Agents are always better than simple workflows" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Complexity, value, viability, and recoverable errors should all hold. Otherwise a single call or a coded workflow is simpler and more reliable."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Code that forces tool_choice to a specific tool now fails on Claude Opus 5.5. What should you do instead?",
+      "options": [
+        { "id": "a", "text": "Use auto with a prompt instruction and strict: true, or structured outputs if you only wanted JSON" },
+        { "id": "b", "text": "Retry the same request until it works" },
+        { "id": "c", "text": "Switch off tools entirely" },
+        { "id": "d", "text": "Prefill the assistant turn with the tool name" }
+      ],
+      "answer": "a",
+      "explanation": "Forced tool choice returns a 400 on Opus 5.5, Sonnet 5.5, and Fable 5.1. Use auto plus instructions and strict schemas, or structured outputs."
+    }
+  ]
+}

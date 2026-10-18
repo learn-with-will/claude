@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-16",
+  "lessonId": "lesson-16",
+  "title": "Claude Code Essentials",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "ordering",
+      "prompt": "Order the three phases of Claude Code's agentic loop.",
+      "items": [
+        { "id": "verify", "text": "Verify results" },
+        { "id": "gather", "text": "Gather context" },
+        { "id": "act", "text": "Take action" }
+      ],
+      "answer": ["gather", "act", "verify"],
+      "explanation": "Claude gathers context, takes action, and verifies results, repeating the phases until the task is done."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "How do you cycle permission modes in the Claude Code CLI?",
+      "options": [
+        { "id": "a", "text": "Press Shift+Tab" },
+        { "id": "b", "text": "Press Ctrl+Z" },
+        { "id": "c", "text": "Restart your computer" },
+        { "id": "d", "text": "Type /exit" }
+      ],
+      "answer": "a",
+      "explanation": "Shift+Tab cycles through the permission modes, such as Manual, Accept edits, Plan, and Auto."
+    },
+    {
+      "id": "q3",
+      "type": "match-pair",
+      "prompt": "Match each command to what it does.",
+      "pairs": [
+        { "left": "/init", "right": "Generate a starter CLAUDE.md" },
+        { "left": "/clear", "right": "Start a new conversation with empty context" },
+        { "left": "/rewind", "right": "Roll code or conversation back to a checkpoint" },
+        { "left": "/context", "right": "Show what's filling the context window" }
+      ],
+      "explanation": "These are among the most-used commands: /init sets up project instructions, /clear resets context, /rewind restores checkpoints, and /context shows usage."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "If the ____ environment variable is set, Claude Code uses that key instead of your Pro or Max subscription.",
+      "answer": ["ANTHROPIC_API_KEY"],
+      "explanation": "A set ANTHROPIC_API_KEY makes Claude Code authenticate with the API key, so usage is billed at API rates instead of your plan."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which statements about checkpoints are true? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Claude snapshots files before editing them" },
+        { "id": "b", "text": "Pressing Esc twice opens the rewind options" },
+        { "id": "c", "text": "They can't undo actions on remote systems like deployments" },
+        { "id": "d", "text": "They replace the need for git" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Checkpoints cover file edits made through Claude's tools and are restored with Esc Esc or /rewind. They don't undo remote actions and aren't a replacement for git."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What is the single most effective habit for reliable results from Claude Code?",
+      "options": [
+        { "id": "a", "text": "Give Claude a check it can run, like tests or a build, and ask for evidence" },
+        { "id": "b", "text": "Always use bypassPermissions mode" },
+        { "id": "c", "text": "Keep one session open for all your tasks" },
+        { "id": "d", "text": "Write every step of the solution yourself" }
+      ],
+      "answer": "a",
+      "explanation": "Anthropic's best practices put verification first: with a check Claude can run, it iterates until the check passes instead of stopping when work merely looks done."
+    }
+  ]
+}

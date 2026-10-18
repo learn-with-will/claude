@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-17",
+  "lessonId": "lesson-17",
+  "title": "Customizing Claude Code: CLAUDE.md, Skills, Styles, and Permissions",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What size does Anthropic recommend for each CLAUDE.md file?",
+      "options": [
+        { "id": "a", "text": "Under about 200 lines" },
+        { "id": "b", "text": "At least 1,000 lines" },
+        { "id": "c", "text": "Exactly 50 lines" },
+        { "id": "d", "text": "Size doesn't matter" }
+      ],
+      "answer": "a",
+      "explanation": "Target under 200 lines per CLAUDE.md. Longer files consume more context and reduce adherence; move reference material into skills or path-scoped rules."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each file location to who it applies to.",
+      "pairs": [
+        { "left": "~/.claude/CLAUDE.md", "right": "You, across all projects" },
+        { "left": "./CLAUDE.md", "right": "Everyone on the project, via git" },
+        { "left": "./CLAUDE.local.md", "right": "You, in this project only" },
+        { "left": ".claude/settings.json", "right": "Shared team settings and permissions" }
+      ],
+      "explanation": "User files apply everywhere for you, project files are committed for the team, local files stay personal, and the shared settings file carries team permissions and hooks."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "To make a rule in .claude/rules/ load only for matching files, add ____ front-matter with glob patterns.",
+      "answer": ["paths", "paths:"],
+      "explanation": "Rules with paths front-matter load only when Claude works with matching files, saving context."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order how Claude Code evaluates permission rules.",
+      "items": [
+        { "id": "allow", "text": "Allow rules" },
+        { "id": "deny", "text": "Deny rules" },
+        { "id": "ask", "text": "Ask rules" }
+      ],
+      "answer": ["deny", "ask", "allow"],
+      "explanation": "Rules are evaluated deny, then ask, then allow, and the first match wins, so an allow rule can't carve an exception out of a deny rule."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which statements about Claude Code skills are true? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Project skills live in .claude/skills/<name>/SKILL.md" },
+        { "id": "b", "text": "disable-model-invocation: true means only you can run the skill" },
+        { "id": "c", "text": "$ARGUMENTS receives what you type after the command" },
+        { "id": "d", "text": "A skill guarantees an action happens every time, like a hook" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Skills live in .claude/skills/, can be user-only via disable-model-invocation, and receive arguments through $ARGUMENTS. Skills are instructions; only hooks give guarantees."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Which built-in output style leads with the result and drops preamble and recaps?",
+      "options": [
+        { "id": "a", "text": "Concise" },
+        { "id": "b", "text": "Learning" },
+        { "id": "c", "text": "Explanatory" },
+        { "id": "d", "text": "Proactive" }
+      ],
+      "answer": "a",
+      "explanation": "Concise puts the result first and omits narration and recaps. Explanatory adds Insight blocks, Learning leaves TODO(human) pieces, and Proactive proceeds through routine decisions."
+    }
+  ]
+}

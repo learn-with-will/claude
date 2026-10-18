@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-24",
+  "lessonId": "lesson-24",
+  "title": "Capstone: Designing Your Claude Workflow",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "ordering",
+      "prompt": "Order the rungs of the maturity ladder.",
+      "items": [
+        { "id": "automate", "text": "Automate" },
+        { "id": "ask", "text": "Ask" },
+        { "id": "build", "text": "Build" },
+        { "id": "delegate", "text": "Delegate" },
+        { "id": "collaborate", "text": "Collaborate" }
+      ],
+      "answer": ["ask", "collaborate", "delegate", "automate", "build"],
+      "explanation": "Ask, collaborate, delegate, automate, build. Put each task on the lowest rung that handles it well."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each need to the feature that captures it.",
+      "pairs": [
+        { "left": "Background knowledge for an area", "right": "A Project knowledge base" },
+        { "left": "A repeatable procedure or format", "right": "A skill" },
+        { "left": "Access to your apps and data", "right": "Connectors or MCP servers" },
+        { "left": "A whole workflow to share", "right": "A plugin" }
+      ],
+      "explanation": "Each feature has a job: projects hold knowledge, skills hold procedures, connectors give access, and plugins package workflows."
+    },
+    {
+      "id": "q3",
+      "type": "single-choice",
+      "prompt": "What should you have before increasing a workflow's autonomy, for example scheduling it?",
+      "options": [
+        { "id": "a", "text": "Clear success criteria and consistently good results on real examples" },
+        { "id": "b", "text": "The most expensive plan" },
+        { "id": "c", "text": "At least ten connectors enabled" },
+        { "id": "d", "text": "Nothing; automate first and check later" }
+      ],
+      "answer": "a",
+      "explanation": "Define what good means, test on 10–20 real examples, and raise autonomy only once results are consistently good."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "Guardrails should be proportional to a task's ____: light for reversible drafts, strict for irreversible actions.",
+      "answer": ["risk"],
+      "explanation": "Scale guardrails to risk: light review for low risk, approvals and permissions for medium, human decisions for high-stakes or irreversible actions."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which belong in a regular maintenance routine? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Review memory topics and project files" },
+        { "id": "b", "text": "Prune instructions, skills, and CLAUDE.md" },
+        { "id": "c", "text": "Re-check facts marked \"as of writing\" against release notes" },
+        { "id": "d", "text": "Never change a setup once it works" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Claude and your work both change. Review monthly, fix root causes when something goes wrong twice, and stay current with release notes."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "A daily digest silently dropped feedback in other languages for weeks. What would have prevented it?",
+      "options": [
+        { "id": "a", "text": "Success criteria tested on real samples, plus periodic spot-checks" },
+        { "id": "b", "text": "Running the digest twice a day" },
+        { "id": "c", "text": "Using a longer prompt" },
+        { "id": "d", "text": "Turning on incognito mode" }
+      ],
+      "answer": "a",
+      "explanation": "Without a definition of good and a test set, failures stay invisible. Evaluate before automating, and keep spot-checking after."
+    }
+  ]
+}

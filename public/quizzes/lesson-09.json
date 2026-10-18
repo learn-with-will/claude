@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-09",
+  "lessonId": "lesson-09",
+  "title": "Choosing Models, Effort, and Thinking",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "ordering",
+      "prompt": "Order the effort levels from lowest to highest.",
+      "items": [
+        { "id": "high", "text": "High" },
+        { "id": "max", "text": "Max" },
+        { "id": "low", "text": "Low" },
+        { "id": "xhigh", "text": "Extra high" },
+        { "id": "medium", "text": "Medium" }
+      ],
+      "answer": ["low", "medium", "high", "xhigh", "max"],
+      "explanation": "The five levels run Low, Medium, High, Extra high (xhigh), and Max."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Which effort level does the Help Center describe as the best overall balance of quality and speed?",
+      "options": [
+        { "id": "a", "text": "High" },
+        { "id": "b", "text": "Low" },
+        { "id": "c", "text": "Max" },
+        { "id": "d", "text": "Extra high" }
+      ],
+      "answer": "a",
+      "explanation": "Low and Medium suit routine tasks, High is the best overall balance, Extra high targets long-running coding and agentic tasks, and Max is the most thorough."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "On the newest models, thinking can't be turned off in the apps, so ____ is your main control over how much work Claude does.",
+      "answer": ["effort", "the effort level", "effort level"],
+      "explanation": "Haiku 5.5, Sonnet 5.5, Opus 5.5, Fable 5.1, and Opus 5 always think in the apps; effort sets how much."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each task to a sensible starting setup.",
+      "pairs": [
+        { "left": "Quick rewrite of one sentence", "right": "Haiku or Sonnet at Low/Medium effort" },
+        { "left": "Multi-document decision memo", "right": "Opus at High effort" },
+        { "left": "Long coding or agentic work", "right": "Opus at Extra high effort" },
+        { "left": "The hardest reasoning problem you have", "right": "Fable at High or Max effort" }
+      ],
+      "explanation": "Match the dials to the task: light settings for simple work, stronger models and more effort for complex and long-running work."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which are true about higher effort? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Responses are more thorough" },
+        { "id": "b", "text": "Responses take longer" },
+        { "id": "c", "text": "It uses more tokens and more of your limit" },
+        { "id": "d", "text": "It fixes prompts that are missing context" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Higher effort is more thorough but slower and uses more tokens. It doesn't supply context your prompt left out, so fix the prompt first."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "An answer looks wrong on a hard problem. What should you check first?",
+      "options": [
+        { "id": "a", "text": "Your prompt: is important context missing?" },
+        { "id": "b", "text": "Whether Max effort is on" },
+        { "id": "c", "text": "Your browser version" },
+        { "id": "d", "text": "Whether memory is enabled" }
+      ],
+      "answer": "a",
+      "explanation": "Missing context or vague instructions are often the real cause. Fix the prompt, then raise effort or switch models, and read the thinking summary for faulty assumptions."
+    }
+  ]
+}

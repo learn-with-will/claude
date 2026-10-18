@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-22",
+  "lessonId": "lesson-22",
+  "title": "Cost, Speed, and Scale: Caching, Batches, and Limits",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "ordering",
+      "prompt": "Order how a request is rendered for prompt caching.",
+      "items": [
+        { "id": "messages", "text": "Messages" },
+        { "id": "tools", "text": "Tools" },
+        { "id": "system", "text": "System prompt" }
+      ],
+      "answer": ["tools", "system", "messages"],
+      "explanation": "Requests render as tools, then system, then messages. Caching is a prefix match, so stable content should come first."
+    },
+    {
+      "id": "q2",
+      "type": "single-choice",
+      "prompt": "Cache reads stay at zero across identical requests. What's a likely cause?",
+      "options": [
+        { "id": "a", "text": "A timestamp or other changing value early in the system prompt" },
+        { "id": "b", "text": "Using streaming" },
+        { "id": "c", "text": "The answer being too short" },
+        { "id": "d", "text": "Using Python instead of TypeScript" }
+      ],
+      "answer": "a",
+      "explanation": "Any byte change in the prefix invalidates the cache. Move volatile content after the last breakpoint, or remove it."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "The Message Batches API processes requests asynchronously at ____% of standard prices.",
+      "answer": ["50", "fifty"],
+      "explanation": "Batches are 50% off. Most finish within an hour, with a 24-hour maximum."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which levers save money without reducing quality? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Prompt caching for stable prefixes" },
+        { "id": "b", "text": "Trimming irrelevant input" },
+        { "id": "c", "text": "Batching work that can wait" },
+        { "id": "d", "text": "Always switching to the smallest model" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Caching, input hygiene, and batching are free wins. Smaller models and lower effort are trade-offs you should measure first."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each usage field to what it reports.",
+      "pairs": [
+        { "left": "cache_creation_input_tokens", "right": "Tokens written to the cache this request" },
+        { "left": "cache_read_input_tokens", "right": "Tokens served from the cache" },
+        { "left": "input_tokens", "right": "Uncached input tokens" },
+        { "left": "output_tokens", "right": "Tokens Claude generated, including thinking" }
+      ],
+      "explanation": "These fields show whether caching works and where your spend goes. Thinking is billed as output."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why should you match batch results by custom_id?",
+      "options": [
+        { "id": "a", "text": "Results can arrive in any order" },
+        { "id": "b", "text": "custom_id makes the batch cheaper" },
+        { "id": "c", "text": "Results are always sorted alphabetically" },
+        { "id": "d", "text": "Position-based matching is required by the API" }
+      ],
+      "answer": "a",
+      "explanation": "Batch results aren't guaranteed to be in request order, so key them by the custom_id you assigned."
+    }
+  ]
+}

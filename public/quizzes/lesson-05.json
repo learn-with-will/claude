@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-05",
+  "lessonId": "lesson-05",
+  "title": "Working with Files, Images, and Documents",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "You upload a 400-page PDF and ask about a chart on page 250. What happens?",
+      "options": [
+        { "id": "a", "text": "Claude reads only the text of PDFs over 100 pages, so it can't see the chart" },
+        { "id": "b", "text": "Claude analyzes the chart perfectly" },
+        { "id": "c", "text": "The upload is rejected because PDFs are not supported" },
+        { "id": "d", "text": "Claude reads only the first page" }
+      ],
+      "answer": "a",
+      "explanation": "For PDFs of 101–1000 pages Claude processes text only. Visual analysis applies to PDFs of 100 pages or fewer, so extract the pages or send a screenshot."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which file types can Claude create when code execution and file creation is on? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Excel (.xlsx)" },
+        { "id": "b", "text": "Word (.docx)" },
+        { "id": "c", "text": "PowerPoint (.pptx)" },
+        { "id": "d", "text": "PDF" }
+      ],
+      "answer": ["a", "b", "c", "d"],
+      "explanation": "With code execution and file creation enabled, Claude can create and edit Excel, Word, PowerPoint, and PDF files."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Claude's code for creating files runs in an isolated, sandboxed ____, separate from your systems.",
+      "answer": ["container", "sandbox", "environment"],
+      "explanation": "File creation happens in an isolated, sandboxed container where Claude writes and runs code."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each limit to its value (as of writing).",
+      "pairs": [
+        { "left": "Max size per file in a chat", "right": "500 MB" },
+        { "left": "Max files per chat", "right": "20" },
+        { "left": "Max PDF length", "right": "1000 pages" },
+        { "left": "Max size per project file", "right": "30 MB" }
+      ],
+      "explanation": "Chat uploads allow 500 MB per file and 20 files per chat; PDFs up to 1000 pages; project files up to 30 MB each."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps for a grounded answer from a long document.",
+      "items": [
+        { "id": "answer", "text": "Answer using only those quotes" },
+        { "id": "upload", "text": "Upload the document" },
+        { "id": "verify", "text": "Spot-check the cited pages yourself" },
+        { "id": "quote", "text": "Ask Claude to quote the relevant passages with page numbers" }
+      ],
+      "answer": ["upload", "quote", "answer", "verify"],
+      "explanation": "Upload, have Claude quote relevant passages with page references, answer from those quotes, then verify the citations."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "According to the Help Center, what eliminates the prompt-injection risk of the file-creation sandbox?",
+      "options": [
+        { "id": "a", "text": "Disabling network access for the sandbox" },
+        { "id": "b", "text": "Using a bigger model" },
+        { "id": "c", "text": "Uploading fewer files" },
+        { "id": "d", "text": "Turning on memory" }
+      ],
+      "answer": "a",
+      "explanation": "The main risk is malicious instructions making Claude run untrusted code or send data out; the Help Center says disabling network access eliminates this risk entirely."
+    }
+  ]
+}

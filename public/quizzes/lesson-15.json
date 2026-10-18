@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-15",
+  "lessonId": "lesson-15",
+  "title": "Claude in Chrome and Your Other Apps",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which browser does Claude in Chrome support?",
+      "options": [
+        { "id": "a", "text": "Google Chrome only" },
+        { "id": "b", "text": "Any Chromium-based browser" },
+        { "id": "c", "text": "Chrome and mobile Safari" },
+        { "id": "d", "text": "Firefox only" }
+      ],
+      "answer": "a",
+      "explanation": "Claude in Chrome supports Google Chrome only, not other Chromium-based browsers and not mobile."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Anthropic calls ____ injection the biggest risk facing browser-using AI tools.",
+      "answer": ["prompt"],
+      "explanation": "Prompt injection, hidden instructions in web content, can trick a browser agent into unintended actions. The risk isn't zero even with safety classifiers."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which are recommended practices for using Claude in Chrome safely? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Use a separate browser profile without sensitive accounts" },
+        { "id": "b", "text": "Review proposed actions, especially on new websites" },
+        { "id": "c", "text": "Stop the task if Claude drifts to unrelated sites or asks for sensitive data" },
+        { "id": "d", "text": "Let it trade stocks while you sleep" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Use a separate profile, review actions, and stop at anything unexpected. Stock trading and investment transactions are prohibited uses."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each surface to the job it fits best.",
+      "pairs": [
+        { "left": "Claude in Chrome", "right": "Working across several websites" },
+        { "left": "Google Sheets sidebar", "right": "Auditing formulas in the open spreadsheet" },
+        { "left": "Claude in Slack", "right": "Delegating a task from a team thread" },
+        { "left": "Voice mode on mobile", "right": "Talking a problem through hands-free" }
+      ],
+      "explanation": "Choose the surface where the work already lives: the browser, the document, the team chat, or your phone."
+    },
+    {
+      "id": "q5",
+      "type": "single-choice",
+      "prompt": "What can Claude for Google Workspace never do?",
+      "options": [
+        { "id": "a", "text": "Share the file, give anyone access, or change its owner" },
+        { "id": "b", "text": "Explain a formula" },
+        { "id": "c", "text": "Restyle a slide deck" },
+        { "id": "d", "text": "Answer questions about the open document" }
+      ],
+      "answer": "a",
+      "explanation": "The sidebar edits only the open file, asks before edits by default, and can't share files, grant access, or change ownership."
+    },
+    {
+      "id": "q6",
+      "type": "ordering",
+      "prompt": "Order the steps for a safe first browser-agent task.",
+      "items": [
+        { "id": "shortcut", "text": "Save it as a shortcut once it works reliably" },
+        { "id": "profile", "text": "Open a separate Chrome profile without sensitive accounts" },
+        { "id": "manual", "text": "Switch to Manually approve for the first run" },
+        { "id": "tabs", "text": "Put only the relevant tabs in Claude's tab group" }
+      ],
+      "answer": ["profile", "tabs", "manual", "shortcut"],
+      "explanation": "Isolate the profile, scope the tabs, review each action on the first run, and only reuse or schedule the task after it proves reliable."
+    }
+  ]
+}
